@@ -1,0 +1,22 @@
+public class Livro {
+    String titulo;
+    String autor;
+
+    private Livro(String titulo) {
+        this.titulo = titulo;
+    }
+
+     private Livro(String autor) {
+        this.autor = autor;
+    }
+
+    public static class Builder {
+        String titulo;
+        String autor;
+
+        Builder setTitulo(String titulo) { this.titulo = titulo; return this; }
+        Builder setAutor(String autor) { this.autor = autor; return this; }
+
+        Livro build() { return new Livro(titulo, autor); }
+    }
+}
