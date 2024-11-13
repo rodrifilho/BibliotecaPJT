@@ -1,0 +1,11 @@
+public interface Relatorio {
+    void criar();
+}
+
+class RelatorioPDF implements Relatorio {
+    public void criar() { System.out.println("pdf criado."); }
+}
+
+class RelatorioCSV implements Relatorio {
+    public void criar() { System.out.println("csv criado."); }
+}
