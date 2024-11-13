@@ -1,0 +1,13 @@
+public class Biblioteca {
+    private static Biblioteca instancia = new Biblioteca();
+
+    private Biblioteca() {}
+
+    public static Biblioteca getInstancia() {
+        return instancia;
+    }
+
+    public void emprestarLivro(Livro livro, Usuario usuario) {
+        System.out.println("emprestimo realizado: " + livro.titulo + " para " + usuario.nome);
+    }
+}
