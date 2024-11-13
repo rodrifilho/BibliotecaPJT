@@ -1,0 +1,11 @@
+public class Usuario {
+    String nome;
+
+    Usuario(String nome) { this.nome = nome; }
+}
+
+abstract class UsuarioFactory {
+    public static Usuario criarUsuario(String tipo, String nome) {
+        return new Usuario(nome + " (" + tipo + ")");
+    }
+}
