@@ -8,6 +8,6 @@ public class Biblioteca {
     }
 
     public void emprestarLivro(Livro livro, Usuario usuario) {
-        System.out.println("emprestimo realizado: " + livro.titulo + " para " + usuario.nome);
+        System.out.println("Realizado um emprestimo: " + livro.titulo + " para " + usuario.nome);
     }
 }
