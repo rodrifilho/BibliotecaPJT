@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        BibliotecaFacade biblioteca = new BibliotecaFacade();
+
+        Usuario usuario = UsuarioFactory.criarUsuario("aluno", "Rodrigo");
+
+        Livro livro = new Livro.Builder()
+                .setTitulo("teste1")
+                .setAutor("teste2")
+                .build();
+
+        biblioteca.realizarEmprestimo(livro, usuario);
+
+        Relatorio relatorio = new RelatorioPDF();
+        relatorio.criarr();
+
+        Notificacao notificacao = new SMS(new Email());
+        notificacao.enviar("criado.");
+    }
+}
