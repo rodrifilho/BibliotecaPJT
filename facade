@@ -1,0 +1,7 @@
+public class BibliotecaFacade {
+    Biblioteca biblioteca = Biblioteca.getInstancia();
+
+    public void realizarEmprestimo(Livro livro, Usuario usuario) {
+        biblioteca.emprestarLivro(livro, usuario);
+    }
+}
